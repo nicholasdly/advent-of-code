@@ -1,3 +1,3 @@
-# Advent of Code
+# Advent of Code 2023 🎄
 
-These are my solutions to the annual Advent of Code questions. See other branches for other years.
+These are my solutions to the Advent of Code 2023 questions. See other repository branches for solutions from other years.

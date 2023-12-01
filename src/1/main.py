@@ -1,5 +1,11 @@
 import time
 
+def part_one():
+    return 2
+
+def part_two():
+    return 4
+
 def main():
     print("Hello world!")
 

@@ -1,6 +1,7 @@
+from main import part_one, part_two
 
 def test_part_one():
-    assert 1 + 1 == 2
+    assert part_one() == 2
 
 def test_part_two():
-    assert 1 + 1 == 2
+    assert part_two() == 4
