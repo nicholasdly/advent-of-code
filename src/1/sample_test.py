@@ -1,15 +1,9 @@
-import pytest
-import os
-from main import part_one, part_two
+from main import part_one, part_two, read_input
 
-@pytest.fixture
-def sample_input() -> str:
-    input_path = os.path.join(os.path.dirname(__file__), "input/sample_input.txt")
-    with open(input_path) as file:
-        return file.read()
+def test_part_one():
+    data = read_input("sample_input1.txt")
+    assert part_one(data) == 142
 
-def test_part_one(sample_input: str):
-    assert part_one(sample_input) is None
-
-def test_part_two(sample_input: str):
-    assert part_two(sample_input) is None
+def test_part_two():
+    data = read_input("sample_input2.txt")
+    assert part_two(data) == 281
