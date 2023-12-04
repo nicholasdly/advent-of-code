@@ -1,6 +1,7 @@
 import re
 
-def part_one(schematic: list[list[str]]):
+def part_one(data: str):
+    schematic = _parse_data(data)
 
     # Save all possible part numbers, remove them as they are validated to
     # prevent the same number from being added multiple times to the sum of all
@@ -53,7 +54,8 @@ def part_one(schematic: list[list[str]]):
     
     return total
 
-def part_two(schematic: list[list[str]]):
+def part_two(data: str):
+    schematic = _parse_data(data)
 
     # Save all possible part numbers, remove them as they are validated to
     # prevent the same number from being added multiple times to the sum of all
@@ -110,6 +112,9 @@ def part_two(schematic: list[list[str]]):
                 unvisited.remove(value)
     
     return total
+
+def _parse_data(data: str) -> list[list[str]]:
+    return [[c for c in line.rstrip()] for line in data.splitlines()]
 
 def _digit_scan(line: list[str], index: int) -> int | None:
     """
